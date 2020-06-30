@@ -33,11 +33,11 @@ final class SearchSongsPresenter {
         }
     }
     
-//    private func openSongDetails(with app: ITunesSong) {
-//        let songDetailViewController = SongDetailViewController(song: song)
-//
-//        self.viewInput?.navigationController?.pushViewController(songDetailViewController, animated: true)
-//    }
+    private func openSongDetails(with song: ITunesSong) {
+        let songDetailViewController = SongDetailViewController(song: song)
+
+        self.viewInput?.navigationController?.pushViewController(songDetailViewController, animated: true)
+    }
 }
 
 extension SearchSongsPresenter: SearchSongsViewOutput {
@@ -48,7 +48,7 @@ extension SearchSongsPresenter: SearchSongsViewOutput {
     }
     
     func viewDidSelectSong(_ song: ITunesSong) {
-//        self.openAppDetails(with: song)
+        self.openSongDetails(with: song)
     }
     
     
